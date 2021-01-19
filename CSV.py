@@ -21,7 +21,7 @@ print (Reviews_avg_col)
 
 print(file.groupby('Year').agg(np.average))
 print(file.groupby(['Year','User Rating']).agg({'Price':(np.average, np.sum)}))
-file.groupby('Year')['Price'].transform(np.average))
+file.groupby('Year')['Price'].transform(np.average)
 
 print(file.sort_values(["Reviews", "User Rating"]).head(10))
 
