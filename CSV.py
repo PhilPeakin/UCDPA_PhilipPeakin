@@ -1,5 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 #Import a CSV File into a pandas DataFrame
 file = pd.read_csv(r"C:\Users\Philip\Desktop\Data Analytics\Amazon CSV\Bestsellers.csv")
 print(file)
@@ -10,9 +9,9 @@ file.set_index('Author', inplace=True)
 #Using Numpy
 import numpy as np
 Rating_avg_col = np.mean(Rating,0)
-print (Rating_avg_col)
+print(Rating_avg_col)
 Reviews_avg_col = np.mean(Reviews,0)
-print (Reviews_avg_col)
+print(Reviews_avg_col)
 #Dictionary & Lists
 Titles = ['10-day green smoothie cleanse', '11/22/63', '12 rules for life: an antidote to chaos', '1984 (signet classics)']
 Prices = ['8', '22', '15', '6', '12', '11','30']
@@ -72,9 +71,5 @@ df4.iloc[1:7, 2]
 df4.loc[::40]
 df4.loc[[0,1,2],:]
 
-#Visuals
+#Web Scraping
 
-x = ([1,2,3,4,5,6,7,8,9])
-y = ([11,12,13,14,15,16,17,18,19,20])
-plt.plot(x,y)
-plt.show()
