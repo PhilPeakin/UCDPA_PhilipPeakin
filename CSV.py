@@ -52,6 +52,7 @@ print(MissingValues2)
 Duplicates = file.duplicated(['Name'])
 print(file['Name'].duplicated().sum())
 file.duplicated(['Name'],keep='first')
+file.drop_duplicates(subset = ['Name'])
 #Functions
 print(len(MissingValues2))
 #Merging DataFrames
