@@ -23,8 +23,6 @@ Prices = ['8', '22', '15', '6', '12', '11','30']
 Price_list = { '10-day green smoothie cleanse':'8','11/22/63':'22','12 rules for life: an antidote to chaos':'15','1984 (signet classics)':'6' }
 print(Price_list)
 #Looping
-for eachReview in Reviews:
-    print(eachReview)
 count = 10
 while count >= 0:
     print(count)
