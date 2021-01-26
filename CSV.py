@@ -1,4 +1,9 @@
 import pandas as pd
+#Web Scraping 2019 - 2020 NBA Stats (Seperate Data from Main Project)
+year = '2019'
+str = 'https://www.basketball-reference.com/leagues/NBA_{}_per_game.html'
+url = str.format(year)
+print(url)
 #Import a CSV File into a pandas DataFrame
 file = pd.read_csv(r"C:\Users\Philip\Desktop\Data Analytics\Amazon CSV\Bestsellers.csv")
 print(file)
@@ -43,6 +48,10 @@ MissingValues1 = df1.isnull()
 print(MissingValues1)
 MissingValues2 = df1.isnull().sum()
 print(MissingValues2)
+#Dropping Duplicates
+Duplicates = file.duplicated(['Name'])
+print(file['Name'].duplicated().sum())
+file.duplicated(['Name'],keep='first')
 #Functions
 print(len(MissingValues2))
 #Merging DataFrames
@@ -67,9 +76,8 @@ df4.tail(3)
 df4.iloc[:10]
 df4.iloc[:, 1].head(5)
 df4.iloc[1:7, 2]
-
 df4.loc[::40]
 df4.loc[[0,1,2],:]
 
-#Web Scraping
+
 
