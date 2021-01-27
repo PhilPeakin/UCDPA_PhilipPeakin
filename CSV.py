@@ -39,6 +39,7 @@ print(Moneybook)
 print(file.sort_values(["Reviews", "User Rating"]).head(10))
 #Indexing
 datafile1 = file.set_index('Year')
+print(datafile1)
 datafile2 = datafile1.reset_index()
 #Missing Values
 df1= file.head(30)
@@ -72,9 +73,11 @@ for i, row in df.iterrows():
 df4= pd.read_csv(r"C:\Users\Philip\Desktop\Data Analytics\Amazon CSV\Bestsellers.csv")
 print(df4.head())
 df4.tail(3)
+print(df4.shape)
 df4.iloc[:10]
 df4.iloc[:, 1].head(5)
 df4.iloc[1:7, 2]
+df4.loc[125:]
 df4.loc[::40]
 df4.loc[[0,1,2],:]
 
