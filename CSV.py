@@ -96,6 +96,8 @@ ylist = "12", "11" ,"11", "11", "10", "9", "9", "8", "7" ,"7"
 #plt.plot(ylist,tlist,'m.')
 #plt.show()
 
+#Using Seaborn
+
 #Fiction  vs Non Fiction 2013 - 2019
 fiction19 = len(file[(file["Year"] == 2019)& (file["Genre"] == "Fiction")])
 non_fiction19 = len(file[(file["Year"] == 2019)& (file["Genre"] == "Non Fiction")])
