@@ -81,5 +81,47 @@ df4.loc[125:]
 df4.loc[::40]
 df4.loc[[0,1,2],:]
 
+#Visualization
+#Matplotlib
+#Most Popular Writer
+top_list = file.groupby(["Author"])["Name"].count()
+top_list = top_list.sort_values(ascending=False)
+print(top_list[:10])
+tlist = "JeffKinney","GaryChapman","SuzanneCollins","Rick Riordan","APA", "Gallup","Dr.Seuss","Rob Elliott","Eric Carle","Bill O'Reilly"
+ylist = "12", "11" ,"11", "11", "10", "9", "9", "8", "7" ,"7"
+#import matplotlib.pyplot as plt
+#plt.title('Most Popular Writer')
+#plt.xlabel('# of Bestsellers')
+#plt.ylabel('Writer')
+#plt.plot(ylist,tlist,'m.')
+#plt.show()
 
-
+#Fiction  vs Non Fiction 2019
+fiction19 = len(file[(file["Year"] == 2019)& (file["Genre"] == "Fiction")])
+non_fiction19 = len(file[(file["Year"] == 2019)& (file["Genre"] == "Non Fiction")])
+print(fiction19)
+print(non_fiction19)
+fiction18 = len(file[(file["Year"] == 2018)& (file["Genre"] == "Fiction")])
+non_fiction18 = len(file[(file["Year"] == 2018)& (file["Genre"] == "Non Fiction")])
+print(fiction18)
+print(non_fiction18)
+fiction17 = len(file[(file["Year"] == 2017)& (file["Genre"] == "Fiction")])
+non_fiction17 = len(file[(file["Year"] == 2017)& (file["Genre"] == "Non Fiction")])
+print(fiction17)
+print(non_fiction17)
+fiction16 = len(file[(file["Year"] == 2016)& (file["Genre"] == "Fiction")])
+non_fiction16 = len(file[(file["Year"] == 2016)& (file["Genre"] == "Non Fiction")])
+print(fiction16)
+print(non_fiction16)
+fiction15 = len(file[(file["Year"] == 2015)& (file["Genre"] == "Fiction")])
+non_fiction15 = len(file[(file["Year"] == 2015)& (file["Genre"] == "Non Fiction")])
+print(fiction15)
+print(non_fiction15)
+fiction14 = len(file[(file["Year"] == 2014)& (file["Genre"] == "Fiction")])
+non_fiction14 = len(file[(file["Year"] == 2014)& (file["Genre"] == "Non Fiction")])
+print(fiction14)
+print(non_fiction14)
+fiction13 = len(file[(file["Year"] == 2013)& (file["Genre"] == "Fiction")])
+non_fiction13 = len(file[(file["Year"] == 2013)& (file["Genre"] == "Non Fiction")])
+print(fiction13)
+print(non_fiction13)
