@@ -96,7 +96,15 @@ ylist = "12", "11" ,"11", "11", "10", "9", "9", "8", "7" ,"7"
 #plt.plot(ylist,tlist,'m.')
 #plt.show()
 
-#Using Seaborn
+#Using Seaborn to compare Fiction to Non Fiction
+#import seaborn as sns
+print("Genre:", '\n', file['Genre'].value_counts())
+#sns.countplot('Genre', data=file, palette='Set5')
+#plt.show()
+
+#Books with Highest Reviews & Ratings
+file['Reviews/Rating'] = file['Reviews']/file['User Rating']
+print(file.sort_values('Reviews/Rating', ascending=False).head(10))
 
 #Fiction  vs Non Fiction 2013 - 2019
 fiction19 = len(file[(file["Year"] == 2019)& (file["Genre"] == "Fiction")])
@@ -143,6 +151,7 @@ fiction09 = len(file[(file["Year"] == 2009)& (file["Genre"] == "Fiction")])
 non_fiction09 = len(file[(file["Year"] == 2009)& (file["Genre"] == "Non Fiction")])
 print(fiction09)
 print(non_fiction09)
-#Free Books
+#Free Books with the highest ratings
 FreeBooks= file[file['Price']==0].sort_values('User Rating', ascending=False).head(10)
 print(FreeBooks)
+
